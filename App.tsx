@@ -4,10 +4,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Navigator } from './src/routes/navigator';
 import * as SplashScreen from 'expo-splash-screen';
 import { Easing } from 'react-native-reanimated';
+import * as Font from 'expo-font';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+  const loadFonts = async () => {
+    await Font.loadAsync({
+      'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
+      'Roboto-Light': require('./assets/fonts/Roboto-Light.ttf'),
+      'Roboto-Medium': require('./assets/fonts/Roboto-Medium.ttf'),
+      'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf'),
+    });
+  };
   const [isAppReady, setAppReady] = useState(false);
   const opacity = useState(new Animated.Value(0))[0];
   const scale = useState(new Animated.Value(0.5))[0];
@@ -44,10 +53,18 @@ export default function App() {
     loadResources();
   }, []);
 
+  useEffect(() => {
+    loadFonts().then(() => setAppReady(true));
+  }, []);
+
   const rotationInterpolate = rotate.interpolate({
     inputRange: [0, 1],
     outputRange: ['0deg', '360deg'],
   });
+
+  if (!isAppReady) {
+    return null;
+  }
 
   return (
     <View style={styles.container}>
@@ -79,7 +96,6 @@ export default function App() {
   );
 }
 
-// Styling
 const styles = StyleSheet.create({
   container: {
     flex: 1,
