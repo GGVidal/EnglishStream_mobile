@@ -1,7 +1,6 @@
-import { useCallback, useRef } from 'react';
+import { useCallback } from 'react';
 import {
   ImageURISource,
-  Pressable,
   SafeAreaView,
   StyleSheet,
   View,
@@ -18,16 +17,20 @@ import Button from './components/Button';
 
 const pages = [
   {
-    text: 'Trusted by millions of people, part of one part',
-    image: require('../../../assets/onboarding_1.png'),
+    text: '',
+    image: require('../../../assets/first_page.png'),
   },
   {
-    text: 'Spend money abroad, and track your expense',
-    image: require('../../../assets/onboarding_2.png'),
+    text: '',
+    image: require('../../../assets/second_page.png'),
   },
   {
-    text: 'Receive Money From Anywhere In The World',
-    image: require('../../../assets/onboarding_3.png'),
+    text: '',
+    image: require('../../../assets/third_page.png'),
+  },
+  {
+    text: '',
+    image: require('../../../assets/forth_page.png'),
   },
 ];
 
@@ -47,6 +50,7 @@ export const Onboarding = () => {
     },
     [],
   );
+
   const scrollHandle = useAnimatedScrollHandler({
     onScroll: (event) => {
       x.value = event.contentOffset.x;
@@ -65,8 +69,10 @@ export const Onboarding = () => {
     },
     [x],
   );
+
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      {/* FlatList for the pages */}
       <Animated.FlatList
         ref={flatListRef}
         onScroll={scrollHandle}
@@ -80,7 +86,9 @@ export const Onboarding = () => {
         showsHorizontalScrollIndicator={false}
         onViewableItemsChanged={onViewableItemsChanged}
       />
-      <View style={styles.bottomContainer}>
+
+      {/* Overlay Pagination and Button */}
+      <View style={styles.overlayContainer}>
         <PaginationElement length={pages.length} x={x} />
         <Button
           currentIndex={flatListIndex}
@@ -88,7 +96,7 @@ export const Onboarding = () => {
           flatListRef={flatListRef}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -96,10 +104,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  bottomContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
+  overlayContainer: {
+    position: 'absolute', // Ensures elements are on top
+    bottom: 30, // Adjust to your preference for positioning the pagination
+    left: 0,
+    right: 0,
+    alignItems: 'center', // Center pagination and button horizontally
   },
 });

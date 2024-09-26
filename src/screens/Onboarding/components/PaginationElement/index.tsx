@@ -31,7 +31,7 @@ const PaginationElement = ({ length, x }: Props) => {
           index * SCREEN_WIDTH,
           (index + 1) * SCREEN_WIDTH,
         ],
-        ['#D0D0D0', '#304FFE', '#D0D0D0'],
+        ['#7C2626', '#C93435', '#7C2626'],
       );
 
       return {

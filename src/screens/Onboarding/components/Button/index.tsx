@@ -74,8 +74,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingHorizontal: 24,
     paddingVertical: 16,
-    borderRadius: 100,
-    backgroundColor: '#304FFE',
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',

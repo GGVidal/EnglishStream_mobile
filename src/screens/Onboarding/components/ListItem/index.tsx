@@ -10,6 +10,7 @@ import { Props } from './types';
 const ListItem = ({ item, index, x }: Props) => {
   const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = useWindowDimensions();
 
+  // Background Image Animation
   const rnImageStyle = useAnimatedStyle(() => {
     const translateY = interpolate(
       x.value,
@@ -35,11 +36,12 @@ const ListItem = ({ item, index, x }: Props) => {
       opacity,
       width: SCREEN_WIDTH,
       height: SCREEN_HEIGHT,
-      position: 'absolute',
+      position: 'absolute', // Make the image cover the background
       transform: [{ translateY }],
     };
   }, [index, x]);
 
+  // Text Animation
   const rnTextStyle = useAnimatedStyle(() => {
     const translateY = interpolate(
       x.value,
@@ -74,6 +76,7 @@ const ListItem = ({ item, index, x }: Props) => {
         { width: SCREEN_WIDTH, height: SCREEN_HEIGHT },
       ]}
     >
+      {/* Background Image */}
       <Animated.Image
         source={item.image}
         style={rnImageStyle}
@@ -94,13 +97,16 @@ const styles = StyleSheet.create({
   itemContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center', // Center the text in the middle
-    overflow: 'hidden', // Hide anything that goes outside the screen
+    justifyContent: 'center',
+    overflow: 'hidden', // Hide any overflowing content
   },
   textItem: {
+    zIndex: 1, // Ensures the text stays on top of the background image
     fontWeight: '600',
     lineHeight: 41,
     fontSize: 34,
-    color: 'white', // Text color to contrast with the background image
+    color: 'white', // White text for better visibility on darker backgrounds
+    textAlign: 'center', // Center the text
+    position: 'absolute', // Absolute position so it's always centered
   },
 });
