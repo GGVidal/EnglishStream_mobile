@@ -20,7 +20,7 @@ const PaginationElement = ({ length, x }: Props) => {
           index * SCREEN_WIDTH,
           (index + 1) * SCREEN_WIDTH,
         ],
-        [35, 16, 35],
+        [20, 10, 20],
         Extrapolate.CLAMP,
       );
 

@@ -1,11 +1,5 @@
 import { useCallback } from 'react';
-import {
-  ImageURISource,
-  SafeAreaView,
-  StyleSheet,
-  View,
-  ViewToken,
-} from 'react-native';
+import { ImageURISource, StyleSheet, View, ViewToken } from 'react-native';
 import Animated, {
   useAnimatedRef,
   useAnimatedScrollHandler,
@@ -14,12 +8,9 @@ import Animated, {
 import ListItem from './components/ListItem';
 import PaginationElement from './components/PaginationElement';
 import Button from './components/Button';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const pages = [
-  {
-    text: '',
-    image: require('../../../assets/first_page.png'),
-  },
   {
     text: '',
     image: require('../../../assets/second_page.png'),
@@ -72,7 +63,6 @@ export const Onboarding = () => {
 
   return (
     <View style={styles.container}>
-      {/* FlatList for the pages */}
       <Animated.FlatList
         ref={flatListRef}
         onScroll={scrollHandle}
@@ -87,15 +77,23 @@ export const Onboarding = () => {
         onViewableItemsChanged={onViewableItemsChanged}
       />
 
-      {/* Overlay Pagination and Button */}
-      <View style={styles.overlayContainer}>
-        <PaginationElement length={pages.length} x={x} />
-        <Button
-          currentIndex={flatListIndex}
-          length={pages.length}
-          flatListRef={flatListRef}
-        />
-      </View>
+      <LinearGradient
+        colors={['transparent', '#05141D']}
+        style={styles.gradientOverlay}
+      >
+        <View style={styles.bottomContainer}>
+          <View style={styles.pagination}>
+            <PaginationElement length={pages.length} x={x} />
+          </View>
+          <View style={styles.rightButton}>
+            <Button
+              currentIndex={flatListIndex}
+              length={pages.length}
+              flatListRef={flatListRef}
+            />
+          </View>
+        </View>
+      </LinearGradient>
     </View>
   );
 };
@@ -104,11 +102,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  overlayContainer: {
-    position: 'absolute', // Ensures elements are on top
-    bottom: 30, // Adjust to your preference for positioning the pagination
+  bottomContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+  },
+  pagination: {
+    position: 'absolute',
     left: 0,
     right: 0,
-    alignItems: 'center', // Center pagination and button horizontally
+  },
+  rightButton: {
+    position: 'absolute',
+    right: 0,
+  },
+  gradientOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    height: 150,
+    justifyContent: 'center',
+    paddingHorizontal: 16,
   },
 });
