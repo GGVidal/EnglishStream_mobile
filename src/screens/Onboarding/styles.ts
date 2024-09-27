@@ -34,6 +34,6 @@ export const GradientOverlay = styled(LinearGradient)`
   left: 0;
   right: 0;
   bottom: 0;
-  height: 40%;
+  height: 20%;
   justify-content: center;
 `;

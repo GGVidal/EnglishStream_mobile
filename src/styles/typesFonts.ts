@@ -4,7 +4,6 @@ interface IFontProps extends TextProps {
   fontFamily: FontFamilyTypes;
   fontSize: number;
   color?: string;
-  lineHeight: number;
   fontWeight:
     | 'normal'
     | 'bold'

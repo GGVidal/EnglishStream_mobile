@@ -1,3 +1,5 @@
+import { SecondPage } from '@screens/Onboarding/pages/SecondPage';
+import { ThirdPage } from '@screens/Onboarding/pages/ThirdPage';
 import React from 'react';
 import { useWindowDimensions } from 'react-native';
 import { FirstPage } from '../../pages/FirstPage';
@@ -19,6 +21,8 @@ const ListItem = ({ item, index, x }: Props) => {
         resizeMode="cover"
       />
       {index === 0 && <FirstPage />}
+      {index === 1 && <SecondPage />}
+      {index === 2 && <ThirdPage />}
     </Container>
   );
 };
