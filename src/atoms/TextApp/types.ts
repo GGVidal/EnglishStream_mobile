@@ -5,7 +5,7 @@ import { VariationTypes } from '../../styles/typesFonts';
 export type Props = React.ComponentProps<typeof Text> & {
   variation: keyof typeof VariationTypes;
   style?: StyleProp<TextStyle>;
-  size: 'XS' | 'SM' | 'MD' | 'LG' | 'XL' | undefined;
+  size: 'XS' | 'SM' | 'MD' | 'LG' | 'XL' | 'XXL' | 'XXXL' | undefined;
   color?: string;
   title?: boolean;
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useWindowDimensions } from 'react-native';
+import { FirstPage } from '../../pages/FirstPage';
 import useListItemAnimation from './hooks/useListItemAnimation';
 import { AnimatedImage, AnimatedText, Container } from './styles';
 
@@ -8,11 +9,7 @@ import { Props } from './types';
 const ListItem = ({ item, index, x }: Props) => {
   const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = useWindowDimensions();
 
-  const { rnImageStyle, rnTextStyle } = useListItemAnimation(
-    index,
-    x,
-    SCREEN_WIDTH,
-  );
+  const { rnImageStyle } = useListItemAnimation(index, x, SCREEN_WIDTH);
 
   return (
     <Container style={{ width: SCREEN_WIDTH, height: SCREEN_HEIGHT }}>
@@ -21,7 +18,7 @@ const ListItem = ({ item, index, x }: Props) => {
         style={rnImageStyle}
         resizeMode="cover"
       />
-      <AnimatedText style={rnTextStyle}>{item.text}</AnimatedText>
+      {index === 0 && <FirstPage />}
     </Container>
   );
 };

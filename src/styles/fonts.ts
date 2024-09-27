@@ -10,15 +10,15 @@ const Heading: Typography = {
     lineHeight: 36,
   },
   SM: {
-    fontFamily: FontFamilyTypes.RobotMedium,
-    fontWeight: '500',
+    fontFamily: FontFamilyTypes.RobotRegular,
+    fontWeight: '400',
     fontSize: 32, // Corresponds to 32
     color: colors.grays.darkest,
     lineHeight: 48,
   },
   MD: {
     fontFamily: FontFamilyTypes.RobotMedium,
-    fontWeight: '500',
+    fontWeight: '400',
     fontSize: 40, // Corresponds to 40
     color: colors.grays.darkest,
     lineHeight: 60,
@@ -38,15 +38,15 @@ const Heading: Typography = {
     lineHeight: 78,
   },
   XXL: {
-    fontFamily: FontFamilyTypes.RobotRegular,
-    fontWeight: '400',
-    fontSize: 72, // Corresponds to 72
+    fontFamily: FontFamilyTypes.RobotBold,
+    fontWeight: '600',
+    fontSize: 76, // Corresponds to 72
     color: colors.grays.darkest,
     lineHeight: 108,
   },
   XXXL: {
-    fontFamily: FontFamilyTypes.RobotRegular,
-    fontWeight: '400',
+    fontFamily: FontFamilyTypes.RobotBold,
+    fontWeight: '600',
     fontSize: 88, // Corresponds to 88
     color: colors.grays.darkest,
     lineHeight: 132,

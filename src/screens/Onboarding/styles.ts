@@ -2,7 +2,8 @@ import styled from 'styled-components/native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export const Container = styled.View`
-  flex: 1;
+  height: 100%;
+  width: 100%;
 `;
 
 export const BottomContainer = styled.View`
@@ -10,6 +11,11 @@ export const BottomContainer = styled.View`
   align-items: center;
   justify-content: center;
   padding-horizontal: 16px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 40%;
 `;
 
 export const Pagination = styled.View`
@@ -28,7 +34,6 @@ export const GradientOverlay = styled(LinearGradient)`
   left: 0;
   right: 0;
   bottom: 0;
-  height: 150px;
+  height: 40%;
   justify-content: center;
-  padding-horizontal: 16px;
 `;
