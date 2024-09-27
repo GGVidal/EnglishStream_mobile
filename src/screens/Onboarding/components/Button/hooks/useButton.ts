@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import { useCallback } from 'react';
 import {
   useAnimatedStyle,
@@ -10,6 +11,7 @@ const useButtonAnimation = (
   length: number,
   flatListRef: React.RefObject<any>,
 ) => {
+  const { navigate } = useNavigation();
   const rnBtnStyle = useAnimatedStyle(
     () => ({
       width:
@@ -49,8 +51,7 @@ const useButtonAnimation = (
 
   const onPress = useCallback(() => {
     if (currentIndex.value === length - 1) {
-      console.log('Get Started');
-      return;
+      navigate('Login');
     } else {
       flatListRef?.current?.scrollToIndex({
         index: currentIndex.value + 1,
