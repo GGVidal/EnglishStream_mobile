@@ -2,7 +2,7 @@ import React from 'react';
 import { useWindowDimensions } from 'react-native';
 import { FirstPage } from '../../pages/FirstPage';
 import useListItemAnimation from './hooks/useListItemAnimation';
-import { AnimatedImage, AnimatedText, Container } from './styles';
+import { AnimatedImage, Container } from './styles';
 
 import { Props } from './types';
 

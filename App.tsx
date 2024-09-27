@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Animated, StyleSheet, View, Text } from 'react-native';
+import { Animated, StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { Navigator } from './src/routes/navigator';
+import { Navigator } from '@routes/navigator';
 import * as SplashScreen from 'expo-splash-screen';
 import { Easing } from 'react-native-reanimated';
 import * as Font from 'expo-font';

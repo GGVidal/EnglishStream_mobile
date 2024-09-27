@@ -13,13 +13,3 @@ export const AnimatedImage = styled(Animated.Image)`
   width: 100%;
   height: 100%;
 `;
-
-export const AnimatedText = styled(Animated.Text)`
-  z-index: 1;
-  font-weight: 600;
-  line-height: 41px;
-  font-size: 34px;
-  color: white;
-  text-align: center;
-  position: absolute;
-`;

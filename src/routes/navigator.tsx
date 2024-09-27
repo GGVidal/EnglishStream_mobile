@@ -1,8 +1,8 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Home } from '../screens/Home';
-import { Login } from '../screens/Login';
-import { Onboarding } from '../screens/Onboarding';
+import { Home } from '@screens/Home';
+import { Login } from '@screens/Login';
+import { Onboarding } from '@screens/Onboarding';
 import { RootStackParamList } from './types';
 
 const Stack = createStackNavigator<RootStackParamList>();
