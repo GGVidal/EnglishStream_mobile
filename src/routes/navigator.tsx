@@ -1,10 +1,10 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Home } from '@screens/Home';
 import { Login } from '@screens/Login';
 import { Onboarding } from '@screens/Onboarding';
 import { RootStackParamList } from './types';
 import { colors } from '@styles/colors';
+import { HomeTabs } from './homeNavigator';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -24,7 +24,7 @@ export const Navigator = () => {
         name="Login"
         component={Login}
       />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={HomeTabs} />
     </Stack.Navigator>
   );
 };
