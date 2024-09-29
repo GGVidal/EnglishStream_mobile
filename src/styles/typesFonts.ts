@@ -40,5 +40,5 @@ export enum VariationTypes {
   Subtitle = 'Subtitle',
   //   Caption = 'Caption',
   Body = 'Body',
-  //   Button = 'Button',
+  Button = 'Button',
 }

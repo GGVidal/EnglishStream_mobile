@@ -30,4 +30,22 @@ export const theme = {
       circular: 999,
     },
   },
+  font: {
+    sizes: {
+      nano: 10,
+      tiny: 11,
+      mini: 12,
+      xxxs: 14,
+      xxs: 16,
+      xs: 18,
+      sm: 22,
+      md: 24,
+      lg: 30,
+      xl: 46,
+      display: 64,
+    },
+    regular: 400,
+    medium: 600,
+    bold: 700,
+  },
 };

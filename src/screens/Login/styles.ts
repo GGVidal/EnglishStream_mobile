@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import TextApp from '@atoms/TextApp';
-import { theme } from '@styles/spacings';
+import { theme } from '@styles/theme';
 
 export const Container = styled.SafeAreaView`
   flex: 1;

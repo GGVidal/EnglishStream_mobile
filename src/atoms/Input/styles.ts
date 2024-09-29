@@ -1,6 +1,6 @@
 import { Animated, Platform, TouchableWithoutFeedback } from 'react-native';
 import styled, { css } from 'styled-components/native';
-import { theme } from '@styles/spacings';
+import { theme } from '@styles/theme';
 
 import { colors } from '@styles/colors';
 import {
@@ -68,7 +68,7 @@ export const LabelContainer = styled(Animated.View)<PropsLabel>`
 `;
 
 export const Label = styled(TextApp)<PropsLabel>`
-  ${({ color, hasError, disabled, isHighlighted }) => {
+  ${({ hasError, disabled, isHighlighted }) => {
     if (hasError && isHighlighted) {
       return css`
         color: ${colors.status.error.primary};
