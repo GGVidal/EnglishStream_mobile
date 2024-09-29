@@ -26,3 +26,8 @@ export const PasswordContainer = styled.View`
   width: 70%;
   margin-top: ${theme.spacings.xxxs}px;
 `;
+
+export const ButtonContainer = styled.View`
+  margin-vertical: ${theme.spacings.lg}px;
+  width: 70%;
+`;

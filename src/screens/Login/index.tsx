@@ -1,7 +1,9 @@
+import Button from '@atoms/Button';
 import Input from '@atoms/Input';
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import {
+  ButtonContainer,
   Container,
   EmailContainer,
   LabelInput,
@@ -46,6 +48,11 @@ export const Login = () => {
           size={'small'}
         />
       </PasswordContainer>
+      <ButtonContainer>
+        <Button color="primary" size={'SM'} mode={'filled'}>
+          Sign in
+        </Button>
+      </ButtonContainer>
     </Container>
   );
 };
