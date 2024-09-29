@@ -9,4 +9,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
+  rules: {
+    'no-unused-vars': 'error', // Adiciona a regra para variáveis não utilizadas
+  },
 };
