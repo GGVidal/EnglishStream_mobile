@@ -14,6 +14,7 @@ module.exports = function (api) {
             '@styles': './src/styles',
             '@screens': './src/screens',
             '@utils': './src/utils',
+            '@molecules': './src/molecules',
 
             // Add more aliases as needed
           },

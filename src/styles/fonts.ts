@@ -54,16 +54,16 @@ const Subtitle: Typography = {
     color: colors.grays.light,
   },
   MD: {
-    fontFamily: FontFamilyTypes.RobotMedium,
+    fontFamily: FontFamilyTypes.RobotRegular,
     fontWeight: '500',
     fontSize: 14,
-    color: colors.grays.light,
+    color: colors.grays.dark,
   },
   LG: {
-    fontFamily: FontFamilyTypes.RobotMedium,
-    fontWeight: '500',
+    fontFamily: FontFamilyTypes.RobotRegular,
+    fontWeight: '400',
     fontSize: 16,
-    color: colors.grays.light,
+    color: colors.grays.dark,
   },
   XL: {
     fontFamily: FontFamilyTypes.RobotLight,

@@ -4,6 +4,7 @@ import { Home } from '@screens/Home';
 import { Login } from '@screens/Login';
 import { Onboarding } from '@screens/Onboarding';
 import { RootStackParamList } from './types';
+import { colors } from '@styles/colors';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -16,7 +17,10 @@ export const Navigator = () => {
         component={Onboarding}
       />
       <Stack.Screen
-        options={{ headerShown: false }}
+        options={{
+          headerShown: false,
+          cardStyle: { backgroundColor: colors.white },
+        }}
         name="Login"
         component={Login}
       />

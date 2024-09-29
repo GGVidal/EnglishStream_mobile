@@ -91,6 +91,7 @@ export const Input = styled.TextInput.attrs(({ editable }) => ({
     : colors.neutral.lnk.normal,
 }))<PropsInput>`
   flex: 1;
+  border-color: #768c9980;
   ${Platform.OS === 'web' &&
   css`
     outline-style: none;

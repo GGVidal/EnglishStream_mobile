@@ -1,13 +1,17 @@
 import Button from '@atoms/Button';
 import Input from '@atoms/Input';
+import Link from '@molecules/Link';
+import { colors } from '@styles/colors';
 import React from 'react';
 import { Image, View } from 'react-native';
+import TextApp from '@atoms/TextApp';
 import {
   ButtonContainer,
   Container,
   EmailContainer,
   LabelInput,
   PasswordContainer,
+  SignUpContainer,
   Title,
 } from './styles';
 
@@ -49,10 +53,27 @@ export const Login = () => {
         />
       </PasswordContainer>
       <ButtonContainer>
-        <Button color="primary" size={'SM'} mode={'filled'}>
+        <Button color="primary" size={'MD'} mode={'filled'}>
           Sign in
         </Button>
       </ButtonContainer>
+      <SignUpContainer>
+        <TextApp variation="Subtitle" size="LG">
+          Not a member?{' '}
+        </TextApp>
+        <Link
+          text={'Sign up'}
+          color={colors.blues.lighter}
+          variation={'Subtitle'}
+          size={'LG'}
+        />
+      </SignUpContainer>
+      <Link
+        text={'Forgot your password?'}
+        color={colors.blues.lighter}
+        variation={'Subtitle'}
+        size={'LG'}
+      />
     </Container>
   );
 };

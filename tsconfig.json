@@ -6,6 +6,7 @@
     "paths": {
       "@routes/*": ["routes/*"],
       "@atoms/*": ["atoms/*"],
+      "@molecules/*": ["molecules/*"],
       "@styles/*": ["styles/*"],
       "@screens/*": ["screens/*"],
       "@utils/*": ["utils/*"]
