@@ -7,7 +7,8 @@
       "@routes/*": ["routes/*"],
       "@atoms/*": ["atoms/*"],
       "@styles/*": ["styles/*"],
-      "@screens/*": ["screens/*"]
+      "@screens/*": ["screens/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }

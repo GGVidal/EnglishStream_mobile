@@ -39,6 +39,6 @@ export enum VariationTypes {
   Heading = 'Heading',
   Subtitle = 'Subtitle',
   //   Caption = 'Caption',
-  //   Body = 'Body',
+  Body = 'Body',
   //   Button = 'Button',
 }

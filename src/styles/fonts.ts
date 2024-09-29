@@ -79,7 +79,41 @@ const Subtitle: Typography = {
   },
 };
 
+const Body: Typography = {
+  SM: {
+    fontFamily: FontFamilyTypes.RobotBold,
+    fontWeight: '500',
+    fontSize: 12,
+    color: colors.grays.darkest,
+  },
+  MD: {
+    fontFamily: FontFamilyTypes.RobotMedium,
+    fontWeight: '600',
+    fontSize: 14,
+    color: colors.grays.darkest,
+  },
+  LG: {
+    fontFamily: FontFamilyTypes.RobotMedium,
+    fontWeight: '500',
+    fontSize: 16,
+    color: colors.grays.light,
+  },
+  XL: {
+    fontFamily: FontFamilyTypes.RobotMedium,
+    fontWeight: '600',
+    fontSize: 18,
+    color: colors.grays.darkest,
+  },
+  XXL: {
+    fontFamily: FontFamilyTypes.RobotLight,
+    fontWeight: '300',
+    fontSize: 48,
+    color: colors.grays.light,
+  },
+};
+
 export const FontTypes = {
   Heading,
   Subtitle,
+  Body,
 };

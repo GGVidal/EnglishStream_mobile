@@ -28,4 +28,47 @@ export const colors = {
     lightest: '#BDCBD3',
     pale: '#DCE5EA',
   },
+  neutral: {
+    cloud: {
+      light: '#F2F2F2',
+      white: '#FFFFFF',
+      normal: '#DADADA',
+      dark: '#121212',
+    },
+    lnk: {
+      disabled: '#999999',
+      light: '#777777',
+      normal: '#555555',
+      dark: '#222222',
+      darker: '#000000',
+    },
+  },
+  status: {
+    success: {
+      light: '#E9F7E6',
+      primary: '#25B000',
+      dark: '#1C8400',
+    },
+    warning: {
+      light: '#FDF8E9',
+      primary: '#EFB520',
+      dark: '#B38818',
+    },
+    error: {
+      light: '#FAE7EB',
+      primary: '#C80E3B',
+      dark: '#960B2C',
+    },
+    info: {
+      light: '#E9F0FA',
+      primary: '#1F67C9',
+      dark: '#174D97',
+    },
+    disabled: {
+      primary: '#D3D3D3',
+      dark: '#9E9E9E',
+    },
+  },
+  white: '#FFFFFF',
+  black: '#000000',
 };

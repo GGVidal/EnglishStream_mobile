@@ -13,6 +13,8 @@ module.exports = function (api) {
             '@atoms': './src/atoms',
             '@styles': './src/styles',
             '@screens': './src/screens',
+            '@utils': './src/utils',
+
             // Add more aliases as needed
           },
         },
