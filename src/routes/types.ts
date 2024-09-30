@@ -5,7 +5,7 @@ export type RootStackParamList = {
 };
 
 export type HomeTabParamList = {
-  Dashboard: undefined;
+  Feed: undefined;
   Profile: undefined;
   Settings: undefined;
 };

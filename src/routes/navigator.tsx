@@ -10,15 +10,14 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 export const Navigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        options={{ headerShown: false }}
-        name="Onboarding"
-        component={Onboarding}
-      />
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="Onboarding" component={Onboarding} />
       <Stack.Screen
         options={{
-          headerShown: false,
           cardStyle: { backgroundColor: colors.white },
         }}
         name="Login"

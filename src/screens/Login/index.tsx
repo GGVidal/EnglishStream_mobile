@@ -14,8 +14,10 @@ import {
   SignUpContainer,
   Title,
 } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export const Login = () => {
+  const { navigate } = useNavigation();
   return (
     <Container>
       <Image source={require('../../../assets/logo_natani.png')} />
@@ -53,7 +55,12 @@ export const Login = () => {
         />
       </PasswordContainer>
       <ButtonContainer>
-        <Button color="primary" size={'MD'} mode={'filled'}>
+        <Button
+          onPress={() => navigate('Home')}
+          color="primary"
+          size={'MD'}
+          mode={'filled'}
+        >
           Sign in
         </Button>
       </ButtonContainer>
