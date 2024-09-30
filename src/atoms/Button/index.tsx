@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ActivityIndicator } from 'react-native';
-import { theme } from '@styles/theme';
 
 import * as S from './styles';
 
@@ -10,6 +9,7 @@ import {
   renderIconColor,
   whichColorsShouldRender,
 } from './Button.helpers';
+import { colors } from '@styles/colors';
 
 const Button = ({
   mode = 'filled',
@@ -52,7 +52,7 @@ const Button = ({
       {loading ? (
         <ActivityIndicator
           testID="loading-button"
-          color={mode === 'filled' ? theme.colors.white : loadingColor}
+          color={mode === 'filled' ? colors.white : loadingColor}
         />
       ) : (
         <>
