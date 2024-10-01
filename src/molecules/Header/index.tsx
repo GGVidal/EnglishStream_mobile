@@ -12,7 +12,6 @@ const { height } = Dimensions.get('window');
 
 export const Header: React.FC = () => {
   let headerHeight: number;
-
   if (height < 650) {
     headerHeight = height * 0.08;
   } else if (height > 800) {
