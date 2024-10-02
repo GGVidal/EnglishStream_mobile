@@ -4,7 +4,7 @@ import { colors } from './colors';
 const Heading: Typography = {
   XS: {
     fontFamily: FontFamilyTypes.RobotMedium,
-    fontWeight: '500',
+    fontWeight: '700',
     fontSize: 24,
     color: colors.grays.darkest,
   },
@@ -51,10 +51,10 @@ const Subtitle: Typography = {
     fontFamily: FontFamilyTypes.RobotMedium,
     fontWeight: '500',
     fontSize: 12,
-    color: colors.grays.light,
+    color: colors.grays.dark,
   },
   MD: {
-    fontFamily: FontFamilyTypes.RobotRegular,
+    fontFamily: FontFamilyTypes.RobotLight,
     fontWeight: '500',
     fontSize: 14,
     color: colors.grays.dark,
@@ -116,13 +116,33 @@ const Button: Typography = {
     fontFamily: FontFamilyTypes.RobotMedium,
     fontWeight: '600',
     fontSize: 12,
-    color: colors.neutral.lnk.dark,
+    color: colors.grays.dark,
   },
   MD: {
     fontFamily: FontFamilyTypes.RobotMedium,
     fontWeight: '600',
     fontSize: 14,
-    color: colors.neutral.lnk.dark,
+    color: colors.grays.dark,
+  },
+  LG: {
+    fontFamily: FontFamilyTypes.RobotMedium,
+    fontWeight: '600',
+    fontSize: 16,
+    color: colors.grays.dark,
+  },
+};
+const Italic: Typography = {
+  SM: {
+    fontFamily: FontFamilyTypes.RobotSerif,
+    fontWeight: '300',
+    fontSize: 12,
+    color: colors.grays.dark,
+  },
+  MD: {
+    fontFamily: FontFamilyTypes.RobotSerif,
+    fontWeight: '300',
+    fontSize: 14,
+    color: colors.grays.dark,
   },
   LG: {
     fontFamily: FontFamilyTypes.RobotMedium,
@@ -137,4 +157,5 @@ export const FontTypes = {
   Subtitle,
   Body,
   Button,
+  Italic,
 };

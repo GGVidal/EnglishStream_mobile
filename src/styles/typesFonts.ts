@@ -23,6 +23,7 @@ export enum FontFamilyTypes {
   RobotLight = 'Roboto-Light',
   RobotMedium = 'Roboto-Medium',
   RobotBold = 'Roboto-Bold',
+  RobotSerif = 'Roboto-Serif',
 }
 
 export interface Typography {
@@ -39,6 +40,7 @@ export enum VariationTypes {
   Heading = 'Heading',
   Subtitle = 'Subtitle',
   //   Caption = 'Caption',
+  Italic = 'Italic',
   Body = 'Body',
   Button = 'Button',
 }
