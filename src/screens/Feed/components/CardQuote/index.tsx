@@ -14,16 +14,6 @@ export const CardQuote = () => {
         <S.SpacingBottom>
           <TextApp variation={'Subtitle'} size={'MD'}>
             That doesn’t sound too tasty does it? The idiom to bite the bullet
-            actually means to force oneself to perform a painful or unpleasant
-            task or to endure an unpleasant situation that is unavoidable.
-          </TextApp>
-        </S.SpacingBottom>
-
-        <S.SpacingBottom>
-          <TextApp variation={'Subtitle'} size={'MD'}>
-            That doesn’t sound too tasty does it? The idiom to bite the bullet
-            actually means to force oneself to perform a painful or unpleasant
-            task or to endure an unpleasant situation that is unavoidable.
           </TextApp>
         </S.SpacingBottom>
 

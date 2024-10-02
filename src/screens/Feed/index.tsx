@@ -1,8 +1,10 @@
 import TextApp from '@atoms/TextApp';
 import { colors } from '@styles/colors';
+
 import React from 'react';
 import { CardQuote } from './components/CardQuote';
-import { FeedContainer, SpacingTop } from './styles';
+import { FeedContainer, ContainerContent, SpacingTop } from './styles';
+import { CardClass } from '@organism/CardClass';
 
 export const Feed = () => {
   return (
@@ -28,7 +30,10 @@ export const Feed = () => {
           </TextApp>
         </SpacingTop>
       </FeedContainer>
-      <CardQuote />
+      <ContainerContent>
+        <CardQuote />
+        <CardClass />
+      </ContainerContent>
     </>
   );
 };
