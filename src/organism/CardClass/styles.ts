@@ -1,10 +1,7 @@
-import styled from 'styled-components/native';
 import { colors } from '@styles/colors';
 import { theme } from '@styles/theme';
-
-export const StyledFlatList = styled.FlatList`
-  padding-bottom: ${theme.spacings.xs}px;
-`;
+import Button from '@atoms/Button';
+import styled from 'styled-components/native';
 
 export const CardContainer = styled.View`
   background-color: ${colors.white};
@@ -13,5 +10,8 @@ export const CardContainer = styled.View`
   padding-bottom: ${theme.spacings.xxs}px;
   padding-right: ${theme.spacings.xxxs}px;
   border-radius: ${theme.border.radius.sm}px;
-  margin-bottom: ${theme.spacings.sm}px;
+`;
+
+export const StyledButton = styled(Button)`
+  margin-top: ${theme.spacings.xs}px;
 `;

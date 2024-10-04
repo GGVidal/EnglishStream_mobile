@@ -73,6 +73,10 @@ export const Feed = () => {
           maxToRenderPerBatch={3}
           windowSize={5}
           removeClippedSubviews={true}
+          bounces={false}
+          contentContainerStyle={{
+            flexGrow: 1,
+          }}
           getItemLayout={getItemLayout}
         />
       </ContainerContent>

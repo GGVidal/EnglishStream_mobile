@@ -1,42 +1,54 @@
+import { Chip } from '@atoms/Chip';
 import TextApp from '@atoms/TextApp';
+import { colors } from '@styles/colors';
 import { theme } from '@styles/theme';
 import React from 'react';
-import { Image, View, Dimensions, StyleSheet } from 'react-native';
-
-const { width } = Dimensions.get('window');
+import * as S from './styles';
 
 export const CardClassContent = () => {
   return (
-    <View style={{ marginTop: theme.spacings.xxs }}>
-      <TextApp
-        style={{ marginBottom: theme.spacings.xxxs }}
-        variation={'Body'}
-        size={'LG'}
-      >
+    <S.Container>
+      <S.StyledTextApp variation={'Body'} size={'LG'}>
         FOR ADVANCED STUDENTS ONLY! (C1 - C2)
-      </TextApp>
-      <View style={styles.imageContainer}>
-        <Image
+      </S.StyledTextApp>
+      <S.ImageContainer>
+        <S.StyledImage
           source={require('../../../assets/image-beach.png')}
-          style={styles.image}
           resizeMode="cover"
         />
-      </View>
+      </S.ImageContainer>
       <TextApp variation={'Heading'} size="XS">
         😎C1 - C2 Level Conversation: Blue Zones - The secret of a longer,
         healthier life
       </TextApp>
-    </View>
+      <S.StyledTextApp
+        style={{
+          marginTop: theme.spacings.quarck,
+          marginBottom: theme.spacings.xxs,
+        }}
+        color={colors.grays.light}
+        variation={'Button'}
+        size="SM"
+      >
+        Wednesday, Sep 25, 1h30 - 2:00 PM -03
+      </S.StyledTextApp>
+      <S.ChipRow>
+        <Chip
+          backgroundColor={colors.grays.pale}
+          textColor={'#3ca04b'}
+          text={'Starts in 3 weeks'}
+        />
+        <Chip
+          backgroundColor={colors.grays.pale}
+          textColor={colors.grays.lighter}
+          text={'Virtual event'}
+        />
+        <Chip
+          backgroundColor={colors.grays.pale}
+          textColor={colors.grays.lighter}
+          text={'10 Attendees'}
+        />
+      </S.ChipRow>
+    </S.Container>
   );
 };
-
-const styles = StyleSheet.create({
-  imageContainer: {
-    marginBottom: theme.spacings.nano,
-  },
-  image: {
-    width: width * 0.8,
-    height: width * 0.3,
-    borderRadius: theme.border.radius.sm,
-  },
-});

@@ -21,7 +21,7 @@ export const ContainerButton = styled.TouchableHighlight.attrs<MainContainerProp
   border-radius: ${({ isIconButton, iconShape }) =>
     iconShape && isIconButton
       ? getBorderRadiusIcon(iconShape, isIconButton)
-      : theme.border.radius.pill}px;
+      : theme.border.radius.sm}px;
   background-color: ${({ mainColor }) => mainColor};
   align-items: center;
   flex-direction: row;
@@ -69,14 +69,7 @@ export const IconButtonContainer = styled.View`
 
 export const Label = styled(MainText)<LabelProps>`
   text-align: center;
-  color: ${({ mode, color }) => {
-    if (mode === 'filled') {
-      return colors.white;
-    }
-
-    return color;
-  }};
-
+  color: ${({ color }) => color};
   font-size: ${({ size }) =>
     size === ButtonSize.XL
       ? theme.font.sizes.xs

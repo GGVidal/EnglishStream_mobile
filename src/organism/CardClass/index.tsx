@@ -1,25 +1,23 @@
-import ImageComponent from '@atoms/Image';
 import { CardClassContent } from '@molecules/CardClassContent';
 import { CardClassHeader } from '@molecules/CardClassHeader';
-import { colors } from '@styles/colors';
-import { theme } from '@styles/theme';
 import React from 'react';
-import { View } from 'react-native';
+import FlagPlus from '../../../assets/icons/flag_plus.svg';
+import * as S from './styles';
 
 export const CardClass = () => {
   return (
-    <View
-      style={{
-        backgroundColor: colors.white,
-        paddingTop: theme.spacings.xs,
-        paddingLeft: theme.spacings.xs,
-        paddingBottom: theme.spacings.xxs,
-        paddingRight: theme.spacings.xxxs,
-        borderRadius: theme.border.radius.sm,
-      }}
-    >
+    <S.CardContainer>
       <CardClassHeader />
       <CardClassContent />
-    </View>
+      <S.StyledButton
+        size="MD"
+        mode="filled"
+        color="secondary"
+        icon={FlagPlus}
+        alignIcon="right"
+      >
+        Add Class
+      </S.StyledButton>
+    </S.CardContainer>
   );
 };
