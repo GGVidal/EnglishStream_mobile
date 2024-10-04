@@ -1,4 +1,5 @@
 import ImageComponent from '@atoms/Image';
+import { CardClassContent } from '@molecules/CardClassContent';
 import { CardClassHeader } from '@molecules/CardClassHeader';
 import { colors } from '@styles/colors';
 import { theme } from '@styles/theme';
@@ -18,6 +19,7 @@ export const CardClass = () => {
       }}
     >
       <CardClassHeader />
+      <CardClassContent />
     </View>
   );
 };

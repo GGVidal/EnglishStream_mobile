@@ -94,9 +94,9 @@ const Body: Typography = {
   },
   LG: {
     fontFamily: FontFamilyTypes.RobotMedium,
-    fontWeight: '500',
+    fontWeight: '600',
     fontSize: 16,
-    color: colors.grays.light,
+    color: colors.grays.darkest,
   },
   XL: {
     fontFamily: FontFamilyTypes.RobotMedium,
