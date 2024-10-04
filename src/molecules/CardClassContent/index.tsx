@@ -4,6 +4,8 @@ import { colors } from '@styles/colors';
 import { theme } from '@styles/theme';
 import React from 'react';
 import * as S from './styles';
+import Profile from '../../../assets/icons/profile_chip.svg';
+import Camera from '../../../assets/icons/camera.svg';
 
 export const CardClassContent = () => {
   return (
@@ -22,10 +24,6 @@ export const CardClassContent = () => {
         healthier life
       </TextApp>
       <S.StyledTextApp
-        style={{
-          marginTop: theme.spacings.quarck,
-          marginBottom: theme.spacings.xxs,
-        }}
         color={colors.grays.light}
         variation={'Button'}
         size="SM"
@@ -42,11 +40,13 @@ export const CardClassContent = () => {
           backgroundColor={colors.grays.pale}
           textColor={colors.grays.lighter}
           text={'Virtual event'}
+          icon={<Camera height={16} width={16} />}
         />
         <Chip
           backgroundColor={colors.grays.pale}
           textColor={colors.grays.lighter}
           text={'10 Attendees'}
+          icon={<Profile height={16} width={16} />}
         />
       </S.ChipRow>
     </S.Container>

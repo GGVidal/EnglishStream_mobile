@@ -1,16 +1,21 @@
 import TextApp from '@atoms/TextApp';
+import { theme } from '@styles/theme';
 import styled from 'styled-components/native';
 
 export const ChipContainer = styled.View<{ backgroundColor: string }>`
   background-color: ${(props) => props.backgroundColor};
-  padding: 8px 16px;
-  border-radius: 16px;
+  padding: ${theme.spacings.nano}px ${theme.spacings.xxs}px;
+  border-radius: ${theme.spacings.xxs}px;
   align-items: center;
-  justify-content: center;
+  flex-direction: row;
 `;
 
 export const ChipText = styled(TextApp)<{ textColor: string }>`
   color: ${(props) => props.textColor};
-  font-size: 14px;
-  font-weight: 600;
+`;
+
+export const IconWrapper = styled.View`
+  margin-right: ${theme.spacings.nano}px;
+  justify-content: center;
+  align-items: center;
 `;

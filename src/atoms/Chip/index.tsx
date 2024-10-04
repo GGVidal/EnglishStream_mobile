@@ -6,10 +6,12 @@ export const Chip: React.FC<ChipProps> = ({
   backgroundColor,
   textColor,
   text,
+  icon,
   ...props
 }) => {
   return (
     <S.ChipContainer {...props} backgroundColor={backgroundColor}>
+      {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
       <S.ChipText variation="Button" size="SM" textColor={textColor}>
         {text}
       </S.ChipText>
