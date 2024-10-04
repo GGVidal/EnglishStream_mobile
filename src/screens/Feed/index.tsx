@@ -1,12 +1,42 @@
+import React, { useCallback } from 'react';
+import { FlatList, ListRenderItemInfo, View } from 'react-native';
 import TextApp from '@atoms/TextApp';
 import { colors } from '@styles/colors';
-
-import React from 'react';
 import { CardQuote } from './components/CardQuote';
 import { FeedContainer, ContainerContent, SpacingTop } from './styles';
 import { CardClass } from '@organism/CardClass';
+import { theme } from '@styles/theme';
+
+const MemoizedCardClass = React.memo(CardClass);
 
 export const Feed = () => {
+  const classData = [
+    { id: '1', content: <MemoizedCardClass /> },
+    { id: '2', content: <MemoizedCardClass /> },
+  ];
+
+  const renderItem = useCallback(
+    ({ item }: ListRenderItemInfo<{ id: string; content: JSX.Element }>) =>
+      item.content,
+    [],
+  );
+
+  const getItemLayout = useCallback(
+    (data: any[] | null, index: number) => ({
+      length: 150,
+      offset: 150 * index,
+      index,
+    }),
+    [],
+  );
+  const renderSeparator = () => (
+    <View
+      style={{
+        marginVertical: theme.spacings.nano,
+      }}
+    />
+  );
+
   return (
     <>
       <FeedContainer>
@@ -30,9 +60,21 @@ export const Feed = () => {
           </TextApp>
         </SpacingTop>
       </FeedContainer>
+
       <ContainerContent>
-        <CardQuote />
-        <CardClass />
+        <FlatList
+          data={classData}
+          keyExtractor={(item) => item.id}
+          ListHeaderComponent={<CardQuote />}
+          renderItem={renderItem}
+          ItemSeparatorComponent={renderSeparator}
+          showsVerticalScrollIndicator={false}
+          initialNumToRender={2}
+          maxToRenderPerBatch={3}
+          windowSize={5}
+          removeClippedSubviews={true}
+          getItemLayout={getItemLayout}
+        />
       </ContainerContent>
     </>
   );
