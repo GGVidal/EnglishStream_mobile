@@ -20,15 +20,15 @@ import { RenderItemProps } from './types';
 const pages = [
   {
     text: '',
-    image: require('../../../assets/second_page.png'),
+    image: require('@assets/second_page.png'),
   },
   {
     text: '',
-    image: require('../../../assets/third_page.png'),
+    image: require('@assets/third_page.png'),
   },
   {
     text: '',
-    image: require('../../../assets/forth_page.png'),
+    image: require('@assets/forth_page.png'),
   },
 ];
 

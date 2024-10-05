@@ -7,7 +7,7 @@ module.exports = function (api) {
       [
         'module-resolver',
         {
-          root: ['./src'], // Specify the root directory
+          root: ['./src'], // Root directory remains src
           alias: {
             '@routes': './src/routes',
             '@atoms': './src/atoms',
@@ -16,8 +16,7 @@ module.exports = function (api) {
             '@utils': './src/utils',
             '@molecules': './src/molecules',
             '@organism': './src/organism',
-
-            // Add more aliases as needed
+            '@assets': './assets',
           },
         },
       ],

@@ -3,7 +3,7 @@ import Input from '@atoms/Input';
 import Link from '@molecules/Link';
 import { colors } from '@styles/colors';
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 import TextApp from '@atoms/TextApp';
 import {
   ButtonContainer,
@@ -20,7 +20,7 @@ export const Login = () => {
   const { navigate } = useNavigation();
   return (
     <Container>
-      <Image source={require('../../../assets/logo_natani.png')} />
+      <Image source={require('@assets/logo_natani.png')} />
       <Title variation="Body" size="XL">
         Log in to your account
       </Title>

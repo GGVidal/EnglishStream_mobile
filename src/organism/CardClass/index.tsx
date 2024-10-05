@@ -1,7 +1,7 @@
 import { CardClassContent } from '@molecules/CardClassContent';
 import { CardClassHeader } from '@molecules/CardClassHeader';
 import React from 'react';
-import FlagPlus from '../../../assets/icons/flag_plus.svg';
+import FlagPlus from '@assets/icons/flag_plus.svg';
 import * as S from './styles';
 
 export const CardClass = () => {

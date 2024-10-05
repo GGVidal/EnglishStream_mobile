@@ -11,11 +11,11 @@ SplashScreen.preventAutoHideAsync();
 export default function App() {
   const loadFonts = async () => {
     await Font.loadAsync({
-      'Roboto-Regular': require('./assets/fonts/Roboto-Regular.ttf'),
-      'Roboto-Light': require('./assets/fonts/Roboto-Light.ttf'),
-      'Roboto-Medium': require('./assets/fonts/Roboto-Medium.ttf'),
-      'Roboto-Bold': require('./assets/fonts/Roboto-Bold.ttf'),
-      'Roboto-Serif': require('./assets/fonts/RobotoSerif-Italic.ttf'),
+      'Roboto-Regular': require('@assets/fonts/Roboto-Regular.ttf'),
+      'Roboto-Light': require('@assets/fonts/Roboto-Light.ttf'),
+      'Roboto-Medium': require('@assets/fonts/Roboto-Medium.ttf'),
+      'Roboto-Bold': require('@assets/fonts/Roboto-Bold.ttf'),
+      'Roboto-Serif': require('@assets/fonts/RobotoSerif-Italic.ttf'),
     });
   };
   const [isAppReady, setAppReady] = useState(false);

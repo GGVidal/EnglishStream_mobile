@@ -11,7 +11,7 @@ const Button = ({ currentIndex, length, flatListRef }: Props) => {
     <AnimatedPressable style={rnBtnStyle} onPress={onPress}>
       <TextStyled style={rnTextStyle}>Get Started</TextStyled>
       <ImageStyled
-        source={require('../../../../../assets/arrow_left.png')}
+        source={require('@assets/arrow_left.png')}
         style={imageAnimatedStyle}
       />
     </AnimatedPressable>

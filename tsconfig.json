@@ -10,7 +10,8 @@
       "@organism/*": ["organism/*"],
       "@styles/*": ["styles/*"],
       "@screens/*": ["screens/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@assets/*": ["../assets/*"]
     }
   }
 }

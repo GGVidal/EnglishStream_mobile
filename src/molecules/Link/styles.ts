@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/native';
 import { theme } from '@styles/theme';
 
-import ExternalLink from '../../../assets/icons/external-link.svg';
+import ExternalLink from '@assets/icons/external-link.svg';
 import { colors } from '@styles/colors';
 import { ExternalProps, TextProps } from './types';
 import TextApp from '@atoms/TextApp';

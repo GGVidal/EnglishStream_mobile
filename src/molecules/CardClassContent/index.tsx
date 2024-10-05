@@ -4,8 +4,8 @@ import { colors } from '@styles/colors';
 import { theme } from '@styles/theme';
 import React from 'react';
 import * as S from './styles';
-import Profile from '../../../assets/icons/profile_chip.svg';
-import Camera from '../../../assets/icons/camera.svg';
+import Profile from '@assets/icons/profile_chip.svg';
+import Camera from '@assets/icons/camera.svg';
 
 export const CardClassContent = () => {
   return (
@@ -15,7 +15,7 @@ export const CardClassContent = () => {
       </S.StyledTextApp>
       <S.ImageContainer>
         <S.StyledImage
-          source={require('../../../assets/image-beach.png')}
+          source={require('@assets/image-beach.png')}
           resizeMode="cover"
         />
       </S.ImageContainer>

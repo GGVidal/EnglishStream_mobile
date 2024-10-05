@@ -2,10 +2,10 @@ import React from 'react';
 import { Dimensions, StatusBar } from 'react-native';
 import * as S from './styles';
 import IconButton from '@atoms/IconButton';
-import Flag from '../../../assets/icons/flag.svg';
-import HamburguerMenu from '../../../assets/icons/hamburguer-menu.svg';
-import Help from '../../../assets/icons/help.svg';
-import Profile from '../../../assets/icons/profile.svg';
+import Flag from '@assets/icons/flag.svg';
+import HamburguerMenu from '@assets/icons/hamburguer-menu.svg';
+import Help from '@assets/icons/help.svg';
+import Profile from '@assets/icons/profile.svg';
 import { colors } from '@styles/colors';
 
 const { height } = Dimensions.get('window');
@@ -35,7 +35,7 @@ export const Header: React.FC = () => {
 
         <S.LogoContainer>
           <S.Logo
-            source={require('../../../assets/logo-white.png')}
+            source={require('@assets/logo-white.png')}
             resizeMode="contain"
           />
         </S.LogoContainer>

@@ -3,7 +3,7 @@ import BulletPoints from '@atoms/BulletPoint';
 import ImageComponent from '@atoms/Image';
 import TextApp from '@atoms/TextApp';
 import { colors } from '@styles/colors';
-import Profile from '../../../assets/icons/profile.svg';
+import Profile from '@assets/icons/profile.svg';
 import * as S from './styles';
 
 export const CardClassHeader = () => {
@@ -11,7 +11,7 @@ export const CardClassHeader = () => {
     <>
       <S.HeaderContainer>
         <ImageComponent
-          source={require('../../../assets/test_image.png')}
+          source={require('@assets/test_image.png')}
           size={36}
           rounded
         />

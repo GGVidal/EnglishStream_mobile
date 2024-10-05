@@ -15,4 +15,5 @@ export const SpacingTop = styled.View`
 
 export const ContainerContent = styled.View`
   padding-horizontal: ${theme.spacings.xxs}px;
+  flex: 1;
 `;

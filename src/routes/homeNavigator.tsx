@@ -6,9 +6,9 @@ import { Search } from '@screens/Search';
 import { colors } from '@styles/colors';
 import { HomeTabParamList } from './types';
 import { Header } from '@molecules/Header';
-import HomeTab from '../../assets/icons/home_tab.svg';
-import ClassesTab from '../../assets/icons/classes_tab.svg';
-import SearchTab from '../../assets/icons/search_tab.svg';
+import HomeTab from '@assets/icons/home_tab.svg';
+import ClassesTab from '@assets/icons/classes_tab.svg';
+import SearchTab from '@assets/icons/search_tab.svg';
 import { theme } from '@styles/theme';
 
 const Tab = createBottomTabNavigator<HomeTabParamList>();
