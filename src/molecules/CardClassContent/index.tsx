@@ -1,13 +1,33 @@
 import { Chip } from '@atoms/Chip';
 import TextApp from '@atoms/TextApp';
 import { colors } from '@styles/colors';
-import { theme } from '@styles/theme';
 import React from 'react';
 import * as S from './styles';
 import Profile from '@assets/icons/profile_chip.svg';
 import Camera from '@assets/icons/camera.svg';
+import { ChipData } from './types';
 
 export const CardClassContent = () => {
+  const chipsData: ChipData[] = [
+    {
+      backgroundColor: colors.grays.pale,
+      textColor: '#3ca04b',
+      text: 'Starts in 3 weeks',
+    },
+    {
+      backgroundColor: colors.grays.pale,
+      textColor: colors.grays.lighter,
+      text: 'Virtual event',
+      icon: <Camera height={16} width={16} />,
+    },
+    {
+      backgroundColor: colors.grays.pale,
+      textColor: colors.grays.lighter,
+      text: '10 Attendees',
+      icon: <Profile height={16} width={16} />,
+    },
+  ];
+
   return (
     <S.Container>
       <S.StyledTextApp variation={'Body'} size={'LG'}>
@@ -31,23 +51,15 @@ export const CardClassContent = () => {
         Wednesday, Sep 25, 1h30 - 2:00 PM -03
       </S.StyledTextApp>
       <S.ChipRow>
-        <Chip
-          backgroundColor={colors.grays.pale}
-          textColor={'#3ca04b'}
-          text={'Starts in 3 weeks'}
-        />
-        <Chip
-          backgroundColor={colors.grays.pale}
-          textColor={colors.grays.lighter}
-          text={'Virtual event'}
-          icon={<Camera height={16} width={16} />}
-        />
-        <Chip
-          backgroundColor={colors.grays.pale}
-          textColor={colors.grays.lighter}
-          text={'10 Attendees'}
-          icon={<Profile height={16} width={16} />}
-        />
+        {chipsData.map((chip, index) => (
+          <Chip
+            key={index}
+            backgroundColor={chip.backgroundColor}
+            textColor={chip.textColor}
+            text={chip.text}
+            icon={chip?.icon}
+          />
+        ))}
       </S.ChipRow>
     </S.Container>
   );

@@ -16,10 +16,11 @@ const Tab = createBottomTabNavigator<HomeTabParamList>();
 export const HomeTabs = () => {
   return (
     <Tab.Navigator
+      sceneContainerStyle={{ backgroundColor: '#DCE2EE' }}
       screenOptions={({ route }) => ({
         tabBarShowLabel: false,
         header: () => <Header />,
-        tabBarIcon: ({ color }) => {
+        tabBarIcon: () => {
           if (route.name === 'Feed') {
             return <HomeTab />;
           } else if (route.name === 'Classes') {
@@ -30,6 +31,7 @@ export const HomeTabs = () => {
         },
         tabBarActiveTintColor: colors.blues.main,
         tabBarInactiveTintColor: colors.grays.medium,
+
         tabBarStyle: {
           height: 60,
           paddingTop: theme.spacings.nano,
