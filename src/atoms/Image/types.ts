@@ -1,4 +1,4 @@
-import { ImageSourcePropType, ViewProps } from 'react-native';
+import { ImageResizeMode, ImageSourcePropType, ViewProps } from 'react-native';
 
 export interface ImageProps extends ViewProps {
   size: number;
@@ -8,4 +8,5 @@ export interface ImageComponentProps {
   source: ImageSourcePropType;
   size?: number;
   rounded?: boolean;
+  resizeMode?: ImageResizeMode;
 }

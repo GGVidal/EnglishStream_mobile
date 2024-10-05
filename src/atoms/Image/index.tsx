@@ -6,8 +6,16 @@ const ImageComponent: React.FC<ImageComponentProps> = ({
   source,
   size = 100,
   rounded = false,
+  resizeMode,
 }) => {
-  return <StyledImage source={source} size={size} rounded={rounded} />;
+  return (
+    <StyledImage
+      resizeMode={resizeMode}
+      source={source}
+      size={size}
+      rounded={rounded}
+    />
+  );
 };
 
 export default ImageComponent;

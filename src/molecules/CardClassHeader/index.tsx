@@ -27,8 +27,10 @@ export const CardClassHeader = () => {
             Na agenda há 6h
           </TextApp>
           <S.BulletWrapper>
-            <Profile width={12} height={12} />
-            <BulletPoints />
+            <BulletPoints
+              icon={<Profile width={12} height={12} />}
+              quantity={6}
+            />
           </S.BulletWrapper>
         </S.UserInfo>
       </S.HeaderContainer>
