@@ -7,9 +7,10 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "test": "yarn test"
   },
   "husky": {
     "hooks": {
@@ -19,8 +20,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --ext .js,.ts,.tsx --fix",
-      "prettier --write"
+      "eslint --max-warnings=0",
+      "prettier --check"
     ]
   },
   "dependencies": {
