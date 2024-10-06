@@ -5,10 +5,10 @@ import React from 'react';
 import * as S from './styles';
 import Profile from '@assets/icons/profile_chip.svg';
 import Camera from '@assets/icons/camera.svg';
-import { ChipData } from './types';
+import { ChipProps } from '@atoms/Chip/types';
 
 export const CardClassContent = () => {
-  const chipsData: ChipData[] = [
+  const chipsData: ChipProps[] = [
     {
       backgroundColor: colors.grays.pale,
       textColor: '#3ca04b',

@@ -1,6 +1,6 @@
 import Button from '@atoms/Button';
 import Input from '@atoms/Input';
-import Link from '@molecules/Link';
+import Link from '@atoms/Link';
 import { colors } from '@styles/colors';
 import React from 'react';
 import { Image } from 'react-native';

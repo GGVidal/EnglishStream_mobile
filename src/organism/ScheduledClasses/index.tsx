@@ -7,11 +7,15 @@ import Camera from '@assets/icons/camera.svg';
 import { DefaultList } from '@molecules/DefaultList';
 import * as S from './styles';
 import { ListRenderItemInfo, View } from 'react-native';
+import { ClassItem, ScheduledClass } from './types';
+import Link from '@atoms/Link';
 
 const ScheduledClassesMemo = React.memo(ScheduledClassesCard);
 
 export const ScheduledClasses = () => {
-  const classData = [
+  const maxClasses = 4;
+
+  const classData: ScheduledClass[] = [
     {
       id: '1',
       classQuantity: 1,
@@ -67,8 +71,33 @@ export const ScheduledClasses = () => {
     },
   ];
 
-  const renderItem = useCallback(
-    ({ item }: ListRenderItemInfo<(typeof classData)[0]>) => (
+  const remainingSlots = maxClasses - classData.length;
+
+  const extendedClassData: ClassItem[] = [
+    ...classData,
+    ...Array.from({ length: remainingSlots }).map((_, index) => ({
+      id: `add-class-${index}`,
+      isAddClass: true,
+    })),
+  ];
+
+  const renderItem = useCallback(({ item }: ListRenderItemInfo<ClassItem>) => {
+    if ('isAddClass' in item) {
+      return (
+        <S.AddClassContainer key={item.id}>
+          <S.AddClassButton>
+            <Link
+              text={'+ Add Class'}
+              color={colors.blues.lighter}
+              variation={'Button'}
+              size={'MD'}
+            />
+          </S.AddClassButton>
+        </S.AddClassContainer>
+      );
+    }
+
+    return (
       <ScheduledClassesMemo
         classQuantity={item.classQuantity}
         chips={item.chips}
@@ -76,9 +105,8 @@ export const ScheduledClasses = () => {
         imageUrl={item.imageUrl}
         title={item.title}
       />
-    ),
-    [],
-  );
+    );
+  }, []);
 
   return (
     <S.Container>
@@ -87,7 +115,7 @@ export const ScheduledClasses = () => {
           Scheduled Classes
         </TextApp>
       </S.HeaderContainer>
-      <DefaultList data={classData} renderItem={renderItem} />
+      <DefaultList data={extendedClassData} renderItem={renderItem} />
     </S.Container>
   );
 };

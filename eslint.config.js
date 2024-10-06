@@ -1,16 +1,15 @@
 const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js'); // Import ESLint's JS module
+const js = require('@eslint/js');
 
-// Initialize FlatCompat with recommendedConfig and allConfig
 const compat = new FlatCompat({
-  recommendedConfig: js.configs.recommended, // Use recommended config
-  allConfig: js.configs.all, // Optional, if using "eslint:all"
-  baseDirectory: __dirname, // Optional; base directory for resolving plugins
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+  baseDirectory: __dirname,
 });
 
 module.exports = [
   {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
+    files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: require('@typescript-eslint/parser'),
       parserOptions: {
@@ -25,11 +24,18 @@ module.exports = [
       react: require('eslint-plugin-react'),
       '@typescript-eslint': require('@typescript-eslint/eslint-plugin'),
     },
+    ignores: ['eslingt.config.js'],
     rules: {
       '@typescript-eslint/no-var-requires': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
-      'react/jsx-uses-react': 'error',
-      'react/jsx-uses-vars': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          varsIgnorePattern: 'React',
+        },
+      ],
+      'react/jsx-uses-react': 'off',
+      'react/jsx-uses-vars': 'off',
+      'no-restricted-imports': 'off',
       'no-console': ['error', { allow: ['tron', 'disableYellowBox'] }],
     },
   },
