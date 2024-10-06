@@ -6,7 +6,7 @@ import Profile from '@assets/icons/profile_chip.svg';
 import Camera from '@assets/icons/camera.svg';
 import { DefaultList } from '@molecules/DefaultList';
 import * as S from './styles';
-import { ListRenderItemInfo } from 'react-native';
+import { ListRenderItemInfo, View } from 'react-native';
 
 const ScheduledClassesMemo = React.memo(ScheduledClassesCard);
 
